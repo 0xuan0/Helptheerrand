@@ -1,0 +1,65 @@
+<view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">服务</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">评价</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">商家</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2]}}">
+            <scroll-view scroll-y="true" class="scoll-h">
+                <block wx:for="{{cart}}" wx:key="{{item.id}}">
+                    <view class="item-ans">
+                        <view class="avatar">
+                            <image class="img" src="{{item.imgUrl}}"></image>
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">{{item.name}}</view>
+                            <view class="tag">{{item.tag}}</view>
+                            <view class="answerHistory"> ￥{{item.price}}</view>
+                        </view>
+                        <view class="btn">
+                            <button id="del{{index}}" type="default" size="mini" bindtap="delCount">-</button>
+                            <input value="{{item.count}}" />
+                            <button id="add{{index}}" type="default" size="mini" bindtap="addCount">+</button>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <view class="dibuGWC">
+        <view class="peisong" bindtap="{{showmodule}}">
+            <view class="waibu" wx:if="{{total>0}}">￥{{total}}</view>
+            <view>另需配送费6元</view>
+        </view>
+        <navigator url="/pages/shoppingCart/shoppingCart" class="zhifu">
+            <text class="tijiao">提交订单</text>
+        </navigator>
+    </view>
+    <view class="drawer_screen" bindtap="hideModal" data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <view class="close_icon" bindtap="hideModal" data-status="0">×</view>
+        <view class="drawer_attr_content">
+            <!-- <view class="text_center">
+                <image class="drawer_image" src="/images/example0.png"></image>
+            </view>
+            <view class="drawer_desc">这里可自定义内容，高度超出300px将出现滚动条，可在wxss中自定义修改高度限制</view>
+            <view class="drawer_desc">点击遮罩层或右上方的关闭按钮可收回抽屉层</view> -->
+             <view class='zhangwei'></view> 
+            <block wx:for="{{gouwuche}}" wx:key="{{item.id}}">
+                <view class="gwc-item">
+                    <view class="gwc-xx">
+                        <view class="gwc-name">{{item.name}}</view>
+                        <view class="gwc-price"> ￥{{item.price}}</view>
+                    </view>
+                    <view class="gwc-btn">
+                        <button id="del{{index}}" type="default" size="mini" bindtap="delCount">-</button>
+                        <view class="gwx-sl">{{item.count}}</view>
+                        <button id="add{{index}}" type="default" size="mini" bindtap="addCount">+</button>
+                    </view>
+                </view>
+            </block>
+
+        </view>
+    </view>
+</view>

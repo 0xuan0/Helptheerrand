@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="userinfo">
+        <image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+    </view>
+    <view style="height:20rpx;background: #eee;width:100%;"></view>
+    
+    <view class="my-item" style='background:none;display:flex;'>
+        <view>当前积分 {{score}} </view>
+        <button wx:if="{{score_sign_continuous == 0}}" style='height:80rpx;margin-right:70rpx;' bindtap="scoresign">每日签到</button>
+        <button wx:if="{{score_sign_continuous > 0}}" disabled='true' style='height:80rpx;margin-right:70rpx;'>已连续{{score_sign_continuous}}天签到</button>
+    </view>
+
+    <view class="my-item">
+        <navigator url="/pages/select-address/index" hover-class="navigator-hover">我的收货地址</navigator>
+    </view>
+    
+    <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+        {{userMobile}}
+    </view>
+    <view style="height:20rpx;background: #eee;width:100%;"></view>
+    <view class="about" bindtap="aboutUs">
+        关于我们
+    </view>
+
+    <view style="height:20rpx;background: #eee;width:100%;"></view>
+
+    <view style="height:20rpx;background: #eee;width:100%;"></view>
+    <view class="version">帮 啦 跑 腿 {{version}}</view>
+    <view style="height:20rpx;background: #eee;width:100%;"></view>
+</view>

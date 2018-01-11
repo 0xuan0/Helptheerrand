@@ -1,0 +1,295 @@
+.tab-h {
+    height: 100%;
+    width: 120rpx;
+    padding-bottom: 130rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #f7f7f7;
+    font-size: 16px; 
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.tab-item {
+    margin: 20rpx 0;
+    padding-left: 30rpx;
+    display: block;
+}
+
+.tab-item.active {
+    color: #4675f9;
+    position: relative;
+}
+
+.tab-item.active:after {
+    content: "";
+    display: block;
+    height: 8rpx;
+    width: 120rpx;
+    background: #4675f9;
+    position: absolute;
+    bottom: 0;
+    left: 5rpx;
+    border-radius: 16rpx;
+}
+
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    padding-right: 30rpx;
+}
+
+.avatar .img {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar .doyen {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    bottom: -2px;
+    right: 20rpx;
+}
+
+.item-ans {
+    width: 100%;
+    display: flex;
+    flex-grow: row no-wrap;
+    justify-content: space-between;
+    padding: 30rpx;
+    box-sizing: border-box;
+    height: 180rpx;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    padding-right: 30rpx;
+}
+
+.avatar .img {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar .doyen {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    bottom: -2px;
+    right: 20rpx;
+}
+
+.expertInfo {
+    font-size: 12px;
+    flex-grow: 2;
+    color: #b0b0b0;
+    line-height: 1.5em;
+}
+
+.expertInfo .name {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.tab-content {
+    margin-left: 120rpx;
+}
+
+.btn {
+    display: inline-block;
+    right: 0;
+    width: 226rpx;
+    height: 60rpx;
+}
+
+.btn button {
+    width: 30rpx;
+    display: inline-block;
+}
+
+.btn input {
+    display: inline-block;
+    margin: 0;
+    width: 60rpx;
+    text-align: center;
+    border: 1px solid #eee;
+    font-size: 16px;
+    height: 28px;
+}
+
+.scoll-h {
+    height: 100%;
+}
+
+/*底部购物车  */
+.dibuGWC {
+    height: 130rpx;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zhangwei{
+    display: block;
+    height: 50rpx;
+}
+
+.peisong {
+    height: 100%;
+    width: 546rpx;
+    display: inline-block;
+    font-size: 40rpx;
+    color: #b0b0b0;
+}
+
+.peisong view {
+    display: inline-block;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+
+.zhifu {
+    padding: 0 26rpx;
+    line-height: 100%;
+    height: 100%;
+    float: right;
+    text-align: center;
+    background-color: #2aa144;
+    z-index: 200;
+}
+
+.tijiao {
+    display: inline-block;
+    margin-top: 36rpx;
+}
+
+.isHidden {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gwc-item{
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+}
+
+.gwc-item view{
+    display: inline-block;
+}
+.gwc-btn{
+    position: absolute;
+    right: -20rpx;
+    top: 10rpx;
+    width: 260rpx;
+
+}
+.gwc-btn button{
+    display: inline-block;
+}
+
+.gwc-price{
+    position: absolute;
+    left: 340rpx;
+}
+
+.gwc-name{
+    width: 330rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.gwx-sl{
+    margin: 0 20rpx;
+}
+
+
+/*遮罩层效果  */
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 80;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 130rpx;
+  left: 0;
+  z-index: 90;
+  background: #fff;
+}
+
+.close_icon {
+  width: 25rpx;
+  height: 25rpx;
+  line-height: 20rpx;
+  font-size: 30rpx;
+  position: absolute;
+  right: 5rpx;
+  top:5rpx;
+  padding: 10rpx;
+  color: #ccc;
+  border: 1rpx solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+}
+
+.drawer_attr_content {
+  padding: 20rpx;
+  height: 400rpx;
+  overflow-y: scroll;
+}
+
+.drawer_image {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.drawer_desc{
+    font-size:26rpx;
+    margin:20rpx;
+}
+
+/* .btn {
+  width: 80%;
+  padding: 15rpx 0;
+  border-radius: 10rpx;
+  text-align: center;
+} */
+
+.open_btn {
+  margin: 40rpx 10%;
+  border-radius: 10rpx;
+  background: #20bb21;
+  color: #fff;
+}

@@ -1,0 +1,48 @@
+<swiper class='LB' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item class="lunbo">
+            <image src="{{item}}" class="slide-image" width="355" height="160" bindtap='c'/>
+        </swiper-item>
+    </block>
+</swiper>
+<view class='yingyin'></view>
+<view class='HZ'>
+    <view class='zhanshi'>
+        <navigator class='column' url="/pages/details/details" hover-class="navigator-hover">
+            <image src='/images/0.jpg'>
+                <text class='guding'>老友三宝饭</text>
+            </image>
+        </navigator>
+        <navigator class='column' url="/pages/details/details">
+            <image src='/images/1.jpg'>
+                <text class='guding'>农家小炒肉</text>
+            </image>
+        </navigator>
+        <navigator class='column' url="/pages/details/details">
+            <image src='/images/2.jpg'>
+                <text class='guding'>咸香盐焗鸭</text>
+            </image>
+        </navigator>
+        <navigator class='column' url="/pages/details/details">
+            <image src='/images/4.jpg'>
+                <text class='guding'>美味紫苏鸭</text>
+            </image>
+        </navigator>
+    </view>
+    <view></view>
+    <scroll-view scroll-y="true" class="scoll-h" >
+        <navigator url="/pages/details/details" wx:for="{{cart}}" wx:key="*this">
+            <view class="item-ans">
+                <view class="avatar">
+                    <image class="img" src="{{item.imgUrl}}"></image> 
+                </view>
+                <view class="expertInfo">
+                    <view class="name">{{item.name}}</view>
+                    <view class="tag">西餐食品</view>
+                    <view class="answerHistory">￥{{item.price}}</view>
+                </view>
+            </view>
+        </navigator>
+    </scroll-view>
+    
+</view>

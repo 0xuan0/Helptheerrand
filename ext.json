@@ -1,0 +1,28 @@
+{
+  "extEnable": true,
+  "extAppid": "wxca5156134b5cf1ff",
+  "directCommit": false,
+  "ext": {
+    "name": "wechat",
+    "attr": {
+      "store_id": "4"
+    }
+  },
+  "extPages": {
+   
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+   
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+
+}
